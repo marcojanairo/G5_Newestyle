@@ -1,5 +1,5 @@
-import './App.css';
-import clothes from './clothesData.js'; // import data file
+import '../css/App.css';
+import clothes from '../data/clothesData.js'; // import data file
 
 function ClothingItem(props) {
 
