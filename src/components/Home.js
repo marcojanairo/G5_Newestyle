@@ -1,41 +1,69 @@
-import React, { Component } from 'react';
-import clothes from '../data/clothesData.js'; // import data file
+import React, { useState } from 'react';
+import Filter from './Filter';
 
+function ClothingItem({ id, name, gender, desc, url, addToCart }) {
+  const imageStyle = {
+    width: '250px',
+    height: '250px',
+  };
 
-function ClothingItem(props) {
+  const handleAddToCart = () => {
+    addToCart({ id, name, gender, desc, url });
+  };
 
-    const imageStyle = {
-      width: '250px',
-      height: '250px',
-    }
-    
-    return (
-      <div className="clothing-item">
-        <h2>{props.name}</h2>
-        <p>Gender: {props.gender}</p>
-        <p>Item description: {props.desc}</p>
-        <img src={props.url} alt={props.name} style={imageStyle}/>
-      </div>
-    )
-  }  
-
-class Home extends Component {    
-  
-  render() {
-    return (
-    <div className="container">
-      {clothes.map((clothing) => (
-        <ClothingItem
-          key={clothing.id}
-          name={clothing.name}
-          gender={clothing.gender}
-          desc={clothing.desc}
-          url={clothing.url}
-        />
-      ))}
-      </div>
-    );
-  }
+  return (
+    <div className="clothing-item">
+      <h2>{name}</h2>
+      <p>Gender: {gender}</p>
+      <p>Item description: {desc}</p>
+      <img src={url} alt={name} style={imageStyle} />
+      <button onClick={handleAddToCart}>Add to Cart</button>
+    </div>
+  );
 }
+
+const Home = ({ clothes, addToCart }) => {
+  const [filteredClothes, setFilteredClothes] = useState(clothes);
+
+  const handleFilterChange = (filterType, value) => {
+    let updatedClothes = clothes;
+
+    switch (filterType) {
+      case 'tops':
+        updatedClothes = clothes.filter((item) => item.tops.includes(value));
+        break;
+      case 'bottoms':
+        updatedClothes = clothes.filter((item) => item.bottoms.includes(value));
+        break;
+      case 'price':
+        updatedClothes = clothes.filter((item) => item.price === value);
+        break;
+
+      default:
+        break;
+    }
+
+    setFilteredClothes(updatedClothes);
+  };
+
+  return (
+    <div className="page-container">
+      <Filter onFilterChange={handleFilterChange} />
+      <div className="container">
+        {filteredClothes.map((clothing) => (
+          <ClothingItem
+            key={clothing.id}
+            id={clothing.id}
+            name={clothing.name}
+            gender={clothing.gender}
+            desc={clothing.desc}
+            url={clothing.url}
+            addToCart={addToCart}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Home;

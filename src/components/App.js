@@ -1,59 +1,52 @@
-import '../css/App.css';
-import clothes from '../data/clothesData.js'; // import data file
-import { Routes, Route, Navigate } from 'react-router-dom';
+import '../css/index.css';
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import Header from './Header';
-import Jackets from './Jackets';
-import Pants from './Pants';
-import Tshirts from './Tshirts';
+import Home from './Home';
+import Men from './Men';
+import Women from './Women';
+import Kids from './Kids';
+import About from './About';
+import clothesData from '../data/clothesData.js';
 
-function ClothingItem(props) {
-
-  const imageStyle = {
-    width: '250px',
-    height: '250px',
-  }
-  
-  return (
-    <div className="clothing-item">
-      <h2>{props.name}</h2>
-      <p>Gender: {props.gender}</p>
-      <p>Item description: {props.desc}</p>
-      <img src={props.url} alt={props.name} style={imageStyle}/>
-    </div>
-  )
-}  
-  
 function App() {
+  const [filteredClothes, setFilteredClothes] = useState(clothesData);
+  const [cart, setCart] = useState([]);
+
+  const handleSearch = (searchTerm) => {
+    const filteredItems = clothesData.filter((item) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredClothes(filteredItems);
+  };
+
+  const addToCart = (item) => {
+    if (item === 'CLEAR_CART') {
+      setCart([]);
+    } else {
+      setCart([...cart, item]);
+    }
+  };
+  
+
   return (
     <div className="App">
       <header className="App-header">
-        <Header />
+        <Header onSearch={handleSearch} cartSize={cart.length} addToCart={addToCart} />
         <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/Jackets" element={<Jackets title="Jackets" />} />
-        <Route path="/Pants" element={<Pants />} />
-        <Route path="/Tshirts" element={<Tshirts />}>
-          {/* Write routes here... */}
-          {/* <Route index element={<Navigate replace to="html" />} />
-          <Route path="/courses/html" element={<HTML />} />
-          <Route path="/courses/css" element={<CSS />} />
-          <Route path="/courses/javascript" element={<JavaScript />} /> */}
-        </Route>
-      </Routes>
-        <div className="center-container">
-          <img src="./logo_Newestyle.png" alt="logo_Newestyle" 
-          style={{ width: '100px', height: '100px' }}  />
-        </div>
-        <h1>Welcome to Newestyle</h1>
-        <div className="button-container">
-        <button >T-Shirts</button><button>Jackets</button><button>Pants</button>
-        </div>
+          <Route
+            path="/"
+            element={<Home clothes={filteredClothes} addToCart={addToCart} />}
+          />
+          <Route path="/Men" element={<Men clothes={filteredClothes} addToCart={addToCart} />} />
+          <Route path="/Women" element={<Women clothes={filteredClothes} addToCart={addToCart} />} />
+          <Route path="/Kids" element={<Kids clothes={filteredClothes} addToCart={addToCart} />} />
+          <Route path="/About" element={<About />} />
+        </Routes>
       </header>
-      
     </div>
   );
-
 }
 
 export default App;

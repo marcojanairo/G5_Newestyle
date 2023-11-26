@@ -1,39 +1,130 @@
-body {
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul,
+li {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.main-nav {
-  list-style: none;
   padding: 0;
-  margin: 0;
+}
+
+/* Set a default font for the entire page */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Style the header */
+.App-header {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style the container */
+.container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
 }
 
-.main-nav li {
-  margin-right: 15px;
+/* Style each clothing item */
+.clothing-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
 }
 
-.main-nav a {
+.clothing-item img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Add some spacing for the header and banner */
+.center-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style the container for the 3x3 grid */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+/* Style each clothing item to fit a 3x3 grid */
+.clothing-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+  width: calc(33.33% - 20px); /* Adjust the width based on your preference */
+  box-sizing: border-box;
+}
+
+.clothing-item img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* NAVIGATION MENU */
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around; /* Adjust this property to control the space between items */
+  padding: 10px; /* Add padding to the entire nav for spacing */
+}
+
+.nav-item {
+  margin-right: 10px; /* Adjust the margin to control the space between individual items */
+}
+
+/* Adjust styles as needed */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  font-size: 16px;
+  color: #fff;
+  padding: 10px; /* Adjust the space between navigation links*/
 }
 
-.main-nav a:hover {
-  color: rgb(109, 114, 62); /* Change color on hover */
+nav a:hover {
+  text-decoration: underline;
 }
 
-.active {
-  color: rgb(114, 9, 242); 
+/* Adjusting the filter*/
+.page-container {
+  display: flex;
+  flex-direction: row-reverse; 
+}
+
+.filter-container {
+  /* Adjust the width of the filter container as needed */
+  flex: 0 0 200px;
+  padding: 16px; /* Add padding for spacing */
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust the gap between clothing items */
+}
+
+.clothing-item {
+  /* Your existing clothing item styles */
+  width: 250px;
+  /* Add any additional styling */
 }
