@@ -1,4 +1,3 @@
-/* Reset some default styles */
 body,
 h1,
 h2,
@@ -14,48 +13,34 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-/* Style the header */
-.App-header {
-  background-color: #ffffff;
-  color: #000000;
-  text-align: center;
-  padding: 20px;
-}
+
 
 /* Style the container */
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Adjust the gap between items as needed */
 }
 
 /* Style each clothing item */
 .clothing-item {
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   padding: 15px;
-  margin: 10px;
   text-align: center;
 }
 
 .clothing-item img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  margin-top: 10px;
 }
 
-/* Add some spacing for the header and banner */
-.center-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 
-/* Style the container for the 3x3 grid */
+/* Style container for the grid */
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 20px;
+  padding: 15px;
 }
 
 /* Style each clothing item to fit a 3x3 grid */
@@ -64,7 +49,7 @@ body {
   padding: 15px;
   margin: 10px;
   text-align: center;
-  width: calc(33.33% - 20px); /* Adjust the width based on your preference */
+  width: 250px;
   box-sizing: border-box;
 }
 
@@ -79,15 +64,15 @@ body {
 .nav-list {
   list-style: none;
   display: flex;
-  justify-content: space-around; /* Adjust this property to control the space between items */
-  padding: 10px; /* Add padding to the entire nav for spacing */
+  justify-content: space-around;
+  padding: 10px;
 }
 
 .nav-item {
-  margin-right: 10px; /* Adjust the margin to control the space between individual items */
+  margin-right: 10px;
 }
 
-/* Adjust styles as needed */
+/* Nav styling*/
 nav {
   background-color: #333;
   color: #fff;
@@ -111,20 +96,33 @@ nav a:hover {
 }
 
 .filter-container {
-  /* Adjust the width of the filter container as needed */
-  flex: 0 0 200px;
-  padding: 16px; /* Add padding for spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
+
+.filter-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.filter-container label {
+  display: block;
+  margin-left: 5px;
+}
+
 
 .container {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px; /* Adjust the gap between clothing items */
+  gap: 16px;
 }
 
-.clothing-item {
-  /* Your existing clothing item styles */
-  width: 250px;
-  /* Add any additional styling */
+.pagination {
+  margin-top: auto;
 }
+
+

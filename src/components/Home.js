@@ -24,6 +24,8 @@ function ClothingItem({ id, name, gender, desc, url, addToCart }) {
 
 const Home = ({ clothes, addToCart }) => {
   const [filteredClothes, setFilteredClothes] = useState(clothes);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9;
 
   const handleFilterChange = (filterType, value) => {
     let updatedClothes = clothes;
@@ -44,13 +46,20 @@ const Home = ({ clothes, addToCart }) => {
     }
 
     setFilteredClothes(updatedClothes);
+    setCurrentPage(1); // Reset to the first page when filters change
   };
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredClothes.slice(indexOfFirstItem, indexOfLastItem);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div className="page-container">
       <Filter onFilterChange={handleFilterChange} />
       <div className="container">
-        {filteredClothes.map((clothing) => (
+        {currentItems.map((clothing) => (
           <ClothingItem
             key={clothing.id}
             id={clothing.id}
@@ -62,6 +71,15 @@ const Home = ({ clothes, addToCart }) => {
           />
         ))}
       </div>
+
+      <div className="pagination">
+        {Array.from({ length: Math.ceil(filteredClothes.length / itemsPerPage) }).map((_, index) => (
+          <button key={index + 1} onClick={() => paginate(index + 1)}>
+            {index + 1}
+          </button>
+        ))}
+      </div>
+
     </div>
   );
 };

@@ -1,0 +1,63 @@
+/* Style the header */
+.App-header {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+  }
+
+h1#welcome-header{
+    text-align: center;
+}
+
+/* Header.css */
+.heading-cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #3498db; /* Adjust the background color as needed */
+    color: #fff; /* Adjust the text color as needed */
+  }
+
+  .cartSize{
+    padding: 15px;
+  }
+
+  .clear-cart-wrapper{
+    margin-right: 20px;
+  }
+  
+  .cart-container {
+    display: flex;
+    align-items: center; /* Center the CartIcon vertically */
+  }
+  
+  #welcome-header {
+    flex-grow: 1; /* Allow the h1 to grow and take up available space */
+    text-align: center;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .search-container {
+    margin-left: auto; /* Move the search to the right-most position */
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px; /* Adjust the space between navigation links */
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Add any other styles as needed */
+  
+  

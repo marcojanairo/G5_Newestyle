@@ -16,7 +16,25 @@ const Header = ({ onSearch, cartSize, addToCart }) => {
 
   return (
     <header>
-      <h1>Welcome to Newestyle</h1>
+      <div class="heading-cart-container">
+      <div class="cart-container">          
+            <CartIcon cartSize={cartSize} clearCart={() => addToCart('CLEAR_CART')} />
+        </div>
+
+        <h1 id="welcome-header">Welcome to Newestyle</h1>
+
+        {isSearchEnabled && (
+            <div className="search-container">
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchTerm}
+                onChange={handleSearchChange}
+              />
+            </div>
+          )}       
+        
+      </div>
       <nav>
         <NavLink to="/" style={({ isActive }) => (isActive ? { background: 'red' } : undefined)}>
           Home
@@ -26,18 +44,7 @@ const Header = ({ onSearch, cartSize, addToCart }) => {
         <NavLink to="/Kids">Kids</NavLink>
         <NavLink to="/About">About</NavLink>
 
-        {isSearchEnabled && (
-          <div className="search-container">
-            <input
-              type="text"
-              placeholder="Search..."
-              value={searchTerm}
-              onChange={handleSearchChange}
-            />
-          </div>
-        )}
         
-        <CartIcon cartSize={cartSize} clearCart={() => addToCart('CLEAR_CART')} />
       </nav>
     </header>
   );
