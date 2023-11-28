@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import Filter from './Filter';
 
-function ClothingItem({ id, name, gender, desc, url, addToCart }) {
+function ClothingItem({ id, name, gender, desc, image, addToCart }) {
   const imageStyle = {
     width: '250px',
     height: '250px',
   };
 
   const handleAddToCart = () => {
-    addToCart({ id, name, gender, desc, url });
+    addToCart({ id, name, gender, desc, image });
   };
 
   return (
     <div className="clothing-item">
       <h2>{name}</h2>
+      <img src={image} alt={name} style={imageStyle} />
       <p>Gender: {gender}</p>
-      <p>Item description: {desc}</p>
-      <img src={url} alt={name} style={imageStyle} />
+      <p>Item description: {desc}</p>      
       <button onClick={handleAddToCart}>Add to Cart</button>
     </div>
   );
@@ -66,7 +66,7 @@ const Home = ({ clothes, addToCart }) => {
             name={clothing.name}
             gender={clothing.gender}
             desc={clothing.desc}
-            url={clothing.url}
+            image={clothing.image}
             addToCart={addToCart}
           />
         ))}
