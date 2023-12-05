@@ -38,7 +38,7 @@ const Header = ({ onSearch, cartSize, addToCart }) => {
         
       </div>
       <nav>
-        <NavLink to="/" style={({ isActive }) => (isActive ? { background: 'cyan' } : undefined)}>
+        <NavLink to="/" style={({ isActive }) => (isActive ? { background: 'gray' } : undefined)}>
           Home
         </NavLink>
         <NavLink to="/Men">Men</NavLink>

@@ -1,10 +1,93 @@
-/* About.css */
+/* Add this styling to your CSS file */
+
 .about-container {
-    text-align: left;
-  }
-  
-  .icon {
-    margin-right: 10px;
-    color: #3498db; /* Adjust the icon color as needed */
-  }
-  
+  display: flex;
+  /* justify-content: space-around; */
+  /* align-items: flex-start; */
+  align-items: center;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* padding: 20px; */
+}
+
+.about-upper-part {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.left-column {
+  flex: 1;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-column {
+  flex: 1;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.store-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-online-store {
+  margin-top: 10px;
+}
+
+.lower-part {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.lower-part {
+  flex: 2;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Add more styling for your logo if needed */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for the feedback form */
+.CreateFeedback {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Style for the feedback list */
+.FeedbackList {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Style for the feedback table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}

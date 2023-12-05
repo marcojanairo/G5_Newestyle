@@ -14,7 +14,7 @@
         id: '2',
         name: 'Tshirt',
         gender: 'female',
-        desc: 'Lots of t-shirts',
+        desc: 'Lots of T-shirts',
         image: require('./clothes_image/tshirt.jpg'),
         tops: ['Tshirts'],
         bottoms: [],

@@ -9,6 +9,8 @@ import Women from './Women';
 import Kids from './Kids';
 import About from './About';
 import clothesData from '../data/clothesData.js';
+import NewFeedback from './NewFeedback';
+import DisplayFeedback from './DisplayFeedback';
 
 function App() {
   const [filteredClothes, setFilteredClothes] = useState(clothesData);  

@@ -14,20 +14,6 @@ body {
 }
 
 
-
-/* Style each clothing item */
-.clothing-item {
-  border: 1px solid #ccc;
-  padding: 15px;
-  text-align: center;
-}
-
-.clothing-item img {
-  max-width: 100%;
-  height: auto;
-}
-
-
 /* Style container for the grid */
 .container {
   display: flex;
@@ -47,6 +33,7 @@ body {
 }
 
 .clothing-item img {
+  max-width: 100%;
   width: 100%;
   height: auto;
   margin-top: 10px;
@@ -118,12 +105,7 @@ nav a:hover {
 
 .pagination {
   margin-top: auto;
+  align-items: center;
+  text-align: center;
+  display: flexbox;
 }
-
-
-/* Style the container
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-} */
