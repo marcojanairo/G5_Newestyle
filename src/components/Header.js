@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import CartIcon from './CartIcon';
 
+
+
 const Header = ({ onSearch, cartSize, addToCart }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const location = useLocation();
@@ -19,8 +21,8 @@ const Header = ({ onSearch, cartSize, addToCart }) => {
       <div class="heading-cart-container">
       <div class="cart-container">          
             <CartIcon cartSize={cartSize} clearCart={() => addToCart('CLEAR_CART')} />
-        </div>
-
+      </div>
+      
         <h1 id="welcome-header">Welcome to Newestyle</h1>
 
         {isSearchEnabled && (
@@ -32,11 +34,11 @@ const Header = ({ onSearch, cartSize, addToCart }) => {
                 onChange={handleSearchChange}
               />
             </div>
-          )}       
+        )}
         
       </div>
       <nav>
-        <NavLink to="/" style={({ isActive }) => (isActive ? { background: 'red' } : undefined)}>
+        <NavLink to="/" style={({ isActive }) => (isActive ? { background: 'cyan' } : undefined)}>
           Home
         </NavLink>
         <NavLink to="/Men">Men</NavLink>

@@ -14,9 +14,8 @@ function ClothingItem({ id, name, gender, desc, image, addToCart }) {
   return (
     <div className="clothing-item">
       <h2>{name}</h2>
-      <img src={image} alt={name} style={imageStyle} />
-      <p>Gender: {gender}</p>
-      <p>Item description: {desc}</p>      
+      <img src={image} alt={name} style={imageStyle} />      
+      <p id="item-description">{desc}</p>      
       <button onClick={handleAddToCart}>Add to Cart</button>
     </div>
   );
@@ -62,7 +61,6 @@ const Home = ({ clothes, addToCart }) => {
         {currentItems.map((clothing) => (
           <ClothingItem
             key={clothing.id}
-            id={clothing.id}
             name={clothing.name}
             gender={clothing.gender}
             desc={clothing.desc}

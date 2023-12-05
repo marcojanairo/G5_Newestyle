@@ -11,7 +11,7 @@
       },
       {
         id: '2',
-        name: 'Tshirt',
+        name: 'Tshir (Female)',
         gender: 'female',
         desc: 'Lots of t-shirts',
         image: require('./clothes_image/tshirt.jpg'),
@@ -21,7 +21,7 @@
       },
     {
       id: '3',
-      name: 'Shirt with Cat',
+      name: 'Shirt with Cat (Male)',
       gender: 'male',
       desc: 'Graphic Shirt',
       image: require('./clothes_image/cat-shirt.jpg'),

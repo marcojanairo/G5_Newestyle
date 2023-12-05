@@ -1,38 +1,91 @@
 import React, { useState } from 'react';
+import Filter from './Filter';
 
-function ClothingItem(props) {
+function ClothingItem({id, name, gender, desc, image, addToCart}) {
   const imageStyle = {
     width: '250px',
     height: '250px',
   };
 
+  const handleAddToCart = () => {
+    addToCart({ id, name, gender, desc, image });
+  };
+
   return (
     <div className="clothing-item">
-      <h2>{props.name}</h2>
-      <p>Gender: {props.gender}</p>
-      <p>Item description: {props.desc}</p>
-      <img src={props.url} alt={props.name} style={imageStyle} />
+      <h2>{name}</h2>
+      <img src={image} alt={name} style={imageStyle} />      
+      <p id="item-description">{desc}</p>      
+      <button onClick={handleAddToCart}>Add to Cart</button>
     </div>
   );
 }
 
-const Men = ({ clothes }) => {
+const Men = ({ clothes, addToCart }) => {
+  const [filteredClothes, setFilteredClothes] = useState(clothes);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9;
+
+  const handleFilterChange = (filterType, value) => {
+    let updatedClothes = clothes;
+  
+
+    switch (filterType) {
+      case 'tops':
+        updatedClothes = clothes.filter((item) => item.tops.includes(value));
+        break;
+      case 'bottoms':
+        updatedClothes = clothes.filter((item) => item.bottoms.includes(value));
+        break;
+      case 'price':
+        updatedClothes = clothes.filter((item) => item.price === value);
+        break;
+
+      default:
+        break;
+    }
+    
+    setFilteredClothes(updatedClothes);
+    setCurrentPage(1); // Reset to the first page when filters change
+    
+  };
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredClothes.slice(indexOfFirstItem, indexOfLastItem);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   // Filter the prop clothes first based on gender 'male'
-  const menClothes = clothes.filter((item) => item.gender === 'male');
+  const menClothes = currentItems.filter((item) => item.gender === 'male');
 
   return (
-    <div className="container">
-      {menClothes.map((clothing) => (
-        <ClothingItem
+    <div className="page-container">
+      <Filter onFilterChange={handleFilterChange} />
+      <div className="container">
+        {menClothes.map((clothing) => (
+          <ClothingItem
           key={clothing.id}
           name={clothing.name}
           gender={clothing.gender}
           desc={clothing.desc}
-          url={clothing.url}
-        />
-      ))}
+          image={clothing.image}
+          addToCart={addToCart}
+          />
+        ))}
+      </div>
+
+      <div className="pagination">
+        {Array.from({ length: Math.ceil(filteredClothes.length / itemsPerPage) }).map((_, index) => (
+          <button key={index + 1} onClick={() => paginate(index + 1)}>
+            {index + 1}
+          </button>
+        ))}
+      </div>
+
     </div>
+
+    
   );
 };
 
