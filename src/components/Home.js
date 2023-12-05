@@ -1,30 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Filter from './Filter';
 
-function ClothingItem({ id, name, gender, desc, image, addToCart }) {
+function ClothingItem({ id, name, gender, desc, price, image, addToCart }) {
   const imageStyle = {
     width: '250px',
     height: '250px',
   };
 
   const handleAddToCart = () => {
-    addToCart({ id, name, gender, desc, image });
+    addToCart({ id, name, gender, desc, price, image });
   };
 
   return (
     <div className="clothing-item">
       <h2>{name}</h2>
       <img src={image} alt={name} style={imageStyle} />      
-      <p id="item-description">{desc}</p>      
+      <p id="item-description">{desc}</p>
+      <p id="item-description">${price}</p>
       <button onClick={handleAddToCart}>Add to Cart</button>
     </div>
   );
 }
 
-const Home = ({ clothes, addToCart }) => {
+const Home = ({ clothes, addToCart}) => {
+  console.log('Received clothes:', clothes);
   const [filteredClothes, setFilteredClothes] = useState(clothes);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9;
+  const itemsPerPage = 6;
 
   const handleFilterChange = (filterType, value) => {
     let updatedClothes = clothes;
@@ -36,8 +38,8 @@ const Home = ({ clothes, addToCart }) => {
       case 'bottoms':
         updatedClothes = clothes.filter((item) => item.bottoms.includes(value));
         break;
-      case 'price':
-        updatedClothes = clothes.filter((item) => item.price === value);
+      case 'price_range':
+        updatedClothes = clothes.filter((item) => item.price_range === value);
         break;
 
       default:
@@ -48,6 +50,12 @@ const Home = ({ clothes, addToCart }) => {
     setCurrentPage(1); // Reset to the first page when filters change
   };
 
+    // Use useEffect to update filteredClothes when the clothes prop changes
+    useEffect(() => {
+      setFilteredClothes(clothes);
+    }, [clothes]);
+  
+
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredClothes.slice(indexOfFirstItem, indexOfLastItem);
@@ -56,7 +64,9 @@ const Home = ({ clothes, addToCart }) => {
 
   return (
     <div className="page-container">
-      <Filter onFilterChange={handleFilterChange} />
+      
+      <Filter className="filter-container" onFilterChange={handleFilterChange} />
+      {/* onSearch={ onSearch} */}
       <div className="container">
         {currentItems.map((clothing) => (
           <ClothingItem
@@ -65,6 +75,7 @@ const Home = ({ clothes, addToCart }) => {
             gender={clothing.gender}
             desc={clothing.desc}
             image={clothing.image}
+            price={clothing.price}
             addToCart={addToCart}
           />
         ))}

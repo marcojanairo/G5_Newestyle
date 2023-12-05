@@ -11,12 +11,14 @@ import About from './About';
 import clothesData from '../data/clothesData.js';
 
 function App() {
-  const [filteredClothes, setFilteredClothes] = useState(clothesData);
+  const [filteredClothes, setFilteredClothes] = useState(clothesData);  
   const [cart, setCart] = useState([]);
 
   const handleSearch = (searchTerm) => {
+    console.log('Search term:', searchTerm);
     const filteredItems = clothesData.filter((item) =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.desc.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredClothes(filteredItems);
   };
@@ -37,7 +39,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Home clothes={filteredClothes} addToCart={addToCart} />}
+            element={<Home clothes={filteredClothes} addToCart={addToCart}/>}
           />
           <Route path="/Men" element={<Men clothes={filteredClothes} addToCart={addToCart} />} />
           <Route path="/Women" element={<Women clothes={filteredClothes} addToCart={addToCart} />} />

@@ -4,12 +4,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // Create a Schema object
-const todoSchema = new Schema({
-    name: { type: String, required: false },
+const feedbackSchema = new Schema({
+    username: { type: String, required: false },
     feedback: { type: String, required: true },
 });
 
 // This Activitry creates the collection called activitymodels
-const Feedback = mongoose.model("Feedback", todoSchema);
+const Feedback = mongoose.model("Feedback", feedbackSchema);
 
 module.exports = Feedback;

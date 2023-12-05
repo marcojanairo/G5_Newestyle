@@ -20,13 +20,6 @@ const Filter = ({ onFilterChange }) => {
         <label>
           <input
             type="checkbox"
-            onChange={() => handleFilterChange('tops', 'Long Sleeve')}
-          />
-          Long Sleeve
-        </label>
-        <label>
-          <input
-            type="checkbox"
             onChange={() => handleFilterChange('tops', 'Jackets')}
           />
           Jackets
@@ -34,9 +27,16 @@ const Filter = ({ onFilterChange }) => {
         <label>
           <input
             type="checkbox"
-            onChange={() => handleFilterChange('tops', 'Coats')}
+            onChange={() => handleFilterChange('tops', 'Dresses')}
           />
-          Coats
+          Dresses
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            onChange={() => handleFilterChange('tops', 'Blazers')}
+          />
+          Blazers or Hoodies
         </label>
         <label>
           <input
@@ -54,7 +54,7 @@ const Filter = ({ onFilterChange }) => {
             type="checkbox"
             onChange={() => handleFilterChange('bottoms', 'Shorts')}
           />
-          Shorts
+          Shorts/Skirts
         </label>
         <label>
           <input
@@ -84,37 +84,37 @@ const Filter = ({ onFilterChange }) => {
         <label>
           <input
             type="checkbox"
-            onChange={() => handleFilterChange('price', '0-10')}
+            onChange={() => handleFilterChange('price_range', '0-10')}
           />
-          0-10
+          $0-10
         </label>
         <label>
           <input
             type="checkbox"
-            onChange={() => handleFilterChange('price', '10-15')}
+            onChange={() => handleFilterChange('price_range', '10-15')}
           />
-          10-15
+          $10-15
         </label>
         <label>
           <input
             type="checkbox"
-            onChange={() => handleFilterChange('price', '15-20')}
+            onChange={() => handleFilterChange('price_range', '15-20')}
           />
-          15-20
+          $15-20
         </label>
         <label>
           <input
             type="checkbox"
-            onChange={() => handleFilterChange('price', '20-25')}
+            onChange={() => handleFilterChange('price_range', '20-25')}
           />
-          20-25
+          $20-25
         </label>
         <label>
           <input
             type="checkbox"
-            onChange={() => handleFilterChange('price', '25+')}
+            onChange={() => handleFilterChange('price_range', '25+')}
           />
-          25+
+          $25+
         </label>
       </div>
     </div>

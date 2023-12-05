@@ -15,13 +15,6 @@ body {
 
 
 
-/* Style the container */
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px; /* Adjust the gap between items as needed */
-}
-
 /* Style each clothing item */
 .clothing-item {
   border: 1px solid #ccc;
@@ -99,6 +92,8 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 22px;
+  gap: 16px;
 }
 
 .filter-container div {
@@ -126,3 +121,9 @@ nav a:hover {
 }
 
 
+/* Style the container
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+} */

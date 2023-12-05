@@ -14,7 +14,7 @@ router.route("/add").post(async (req, res) => {
     const username = req.body.username;
     const feedback = req.body.feedback;
     // create a new Activity object
-    const newFeedback = await new Todo({ username, activity });
+    const newFeedback = await new Feedback({ username, feedback });
     
     try {
         await newFeedback.save();
@@ -45,9 +45,9 @@ router.route("/:id").delete(async (req, res) => {
 router.route("/update/:id").post(async (req, res) => {
     try {
         const feedback = await Feedback.findById(req.params.id);
-        todo.feedback = req.body.feedback;
+        feedback.feedback = req.body.feedback;
 
-        await todo.save();
+        await feedback.save();
         res.json("Feedback updated!");
     } catch (err) {
         res.status(400).json("Error: " + err);

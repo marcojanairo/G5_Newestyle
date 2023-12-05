@@ -14,12 +14,12 @@ const Header = ({ onSearch, cartSize, addToCart }) => {
     onSearch(term);
   };
 
-  const isSearchEnabled = location.pathname !== '/About';
+  const isSearchEnabled = location.pathname == '/';
 
   return (
     <header>
-      <div class="heading-cart-container">
-      <div class="cart-container">          
+      <div className="heading-cart-container">
+      <div className="cart-container">          
             <CartIcon cartSize={cartSize} clearCart={() => addToCart('CLEAR_CART')} />
       </div>
       
@@ -44,9 +44,7 @@ const Header = ({ onSearch, cartSize, addToCart }) => {
         <NavLink to="/Men">Men</NavLink>
         <NavLink to="/Women">Women</NavLink>
         <NavLink to="/Kids">Kids</NavLink>
-        <NavLink to="/About">About</NavLink>
-
-        
+        <NavLink to="/About">About</NavLink>        
       </nav>
     </header>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Filter from './Filter';
 
 function ClothingItem({id, name, gender, desc, image, addToCart}) {
@@ -22,9 +22,11 @@ function ClothingItem({id, name, gender, desc, image, addToCart}) {
 }
 
 const Men = ({ clothes, addToCart }) => {
-  const [filteredClothes, setFilteredClothes] = useState(clothes);
+  // Filter the prop clothes first based on gender 'male'
+  const menClothes = clothes.filter((item) => item.gender.toLowerCase() === 'male');
+  const [filteredClothes, setFilteredClothes] = useState(menClothes);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9;
+  const itemsPerPage = 5;
 
   const handleFilterChange = (filterType, value) => {
     let updatedClothes = clothes;
@@ -37,8 +39,8 @@ const Men = ({ clothes, addToCart }) => {
       case 'bottoms':
         updatedClothes = clothes.filter((item) => item.bottoms.includes(value));
         break;
-      case 'price':
-        updatedClothes = clothes.filter((item) => item.price === value);
+      case 'price_range':
+        updatedClothes = clothes.filter((item) => item.price_range === value);
         break;
 
       default:
@@ -56,14 +58,13 @@ const Men = ({ clothes, addToCart }) => {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Filter the prop clothes first based on gender 'male'
-  const menClothes = currentItems.filter((item) => item.gender === 'male');
+   
 
   return (
     <div className="page-container">
       <Filter onFilterChange={handleFilterChange} />
       <div className="container">
-        {menClothes.map((clothing) => (
+        {currentItems.map((clothing) => (
           <ClothingItem
           key={clothing.id}
           name={clothing.name}
@@ -82,10 +83,7 @@ const Men = ({ clothes, addToCart }) => {
           </button>
         ))}
       </div>
-
     </div>
-
-    
   );
 };
 
