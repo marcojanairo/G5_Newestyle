@@ -1,4 +1,3 @@
-/* Style the header */
 .App-header {
     background-color: #ffffff;
     color: #000000;
@@ -16,8 +15,8 @@ h1#welcome-header{
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: #3498db; /* Adjust the background color as needed */
-    color: #fff; /* Adjust the text color as needed */
+    background-color: #3498db;
+    color: #fff;
   }
 
   .cartSize{
@@ -30,17 +29,17 @@ h1#welcome-header{
   
   .cart-container {
     display: flex;
-    align-items: center; /* Center the CartIcon vertically */
+    align-items: center;
   }
   
   #welcome-header {
-    flex-grow: 1; /* Allow the h1 to grow and take up available space */
+    flex-grow: 1;
     text-align: center;
-    margin: 0; /* Remove default margin */
+    margin: 0;
   }
   
   .search-container {
-    margin-left: auto; /* Move the search to the right-most position */
+    margin-left: auto;
   }
   
   nav {
@@ -51,13 +50,9 @@ h1#welcome-header{
   nav a {
     text-decoration: none;
     color: #fff;
-    padding: 10px; /* Adjust the space between navigation links */
+    padding: 10px;
   }
   
   nav a:hover {
     text-decoration: underline;
   }
-  
-  /* Add any other styles as needed */
-  
-  

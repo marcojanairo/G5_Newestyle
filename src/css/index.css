@@ -8,13 +8,10 @@ li {
   padding: 0;
 }
 
-/* Set a default font for the entire page */
 body {
   font-family: 'Arial', sans-serif;
 }
 
-
-/* Style container for the grid */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +19,7 @@ body {
   padding: 15px;
 }
 
-/* Style each clothing item to fit a 3x3 grid */
+
 .clothing-item {
   border: 1px solid #ddd;
   padding: 15px;
@@ -52,7 +49,6 @@ body {
   margin-right: 10px;
 }
 
-/* Nav styling*/
 nav {
   background-color: #333;
   color: #fff;
@@ -69,7 +65,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Adjusting the filter*/
 .page-container {
   display: flex;
   flex-direction: row-reverse; 

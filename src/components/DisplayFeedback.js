@@ -49,8 +49,8 @@ class DisplayFeedback extends Component {
               <h3>Reviews from Customers</h3> <table className="table">
                     <thead className="thead-light">
                         <tr>
-                            <th>Customer Name</th>
-                            <th>Feedbacks</th>
+                            <th>Username</th>
+                            <th>Customer Reviews</th>
                     </tr>
                   </thead>
                   <tbody>

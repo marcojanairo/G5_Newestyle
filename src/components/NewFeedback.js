@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import '../css/About.css';
+
 
 class NewFeedback extends Component {    
 
@@ -45,6 +47,7 @@ class NewFeedback extends Component {
         <h3>Add a New Feedback</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
+            <br />
             <label>Username (optional): </label>
             <input
               type="text"
@@ -56,12 +59,15 @@ class NewFeedback extends Component {
             <br />
             <label>Feedback </label>
             <br />
-            <input
-              type="text"
-              required className="form-control"
+            <textarea className = "form-control-feedback"
+              rows="4"
+              cols="10"
+              // Adjust the number of rows as needed
+              required              
               value={this.state.feedback}
               onChange={this.onChangeFeedback}
-            />
+              >
+            </textarea>
 
           </div>
           <div className="form-group">

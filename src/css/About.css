@@ -1,13 +1,14 @@
-/* Add this styling to your CSS file */
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
 
+/* General styles */
 .about-container {
   display: flex;
-  /* justify-content: space-around; */
-  /* align-items: flex-start; */
-  align-items: center;
   flex-direction: column;
-  /* flex-wrap: wrap; */
-  /* padding: 20px; */
+  align-items: center;
 }
 
 .about-upper-part {
@@ -18,36 +19,35 @@
   padding: 20px;
 }
 
-.left-column {
+.left-column, .right-column {
   flex: 1;
   max-width: 400px;
   padding: 20px;
-  background-color: #f4f4f4;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.left-column {
+  background-color: #f4f4f4;
+  margin-right: 40px;
+}
+
 .right-column {
-  flex: 1;
-  max-width: 400px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f4f4f4;
+  height: 45vh;
+  max-width: 600px;
+  max-height: 600px;
+  flex: 2;
 }
 
 .store-image {
   max-width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 
 .about-online-store {
   margin-top: 10px;
-}
-
-.lower-part {
-  width: 100%;
-  margin-top: 20px;
 }
 
 .lower-part {
@@ -56,38 +56,94 @@
   margin-top: 20px;
 }
 
-/* Add more styling for your logo if needed */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Style for the feedback form */
+/* Feedback Form styling */
 .CreateFeedback {
-  max-width: 400px;
+  max-width: 100%;
   margin: 0 auto;
   text-align: left;
 }
 
-/* Style for the feedback list */
+.CreateFeedback form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.CreateFeedback h3 {
+  font-size: 24px;
+}
+
+.CreateFeedback .form-group {
+  margin-bottom: 20px;
+}
+
+.CreateFeedback label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.CreateFeedback input {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.CreateFeedback .form-control-feedback {
+  width: 98%;    
+}
+
+.CreateFeedback .btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.CreateFeedback .btn:hover {
+  background-color: #0056b3; /* Use your desired hover color */
+}
+
+/* Feedback List styling */
 .FeedbackList {
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* Style for the feedback table */
+.FeedbackList {
+  margin-top: 20px;
+}
+
+.FeedbackList h3 {
+  font-size: 24px;
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
 
-.table th, .table td {
-  padding: 8px;
-  border: 1px solid #ddd;
+.table th,
+.table td {
+  padding: 12px;
   text-align: left;
+}
+
+.table th.customer-name {
+  width: 40%;
+}
+
+.table th.feedback-text {
+  width: 60%;
+}
+
+.table th,
+.table td {
+  border: 1.5px solid #000;
 }
 
 .table th {
   background-color: #f2f2f2;
 }
+

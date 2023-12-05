@@ -9,8 +9,7 @@ const About = () => {
       {/* Left Column: Store Description and Logo */}
       <div className="about-upper-part">
         <div className="left-column">
-          <h2>Our Store</h2>
-          {/* Add your logo using an <img> tag */}
+          <h2>Newestyle Store</h2>
           <img className="store-image"
             src="/logo_Newestyle.png"
             alt="Store Logo"
