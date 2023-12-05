@@ -33,7 +33,7 @@ class NewFeedback extends Component {
     };
 
     console.log(activityvar);
-    axios.post("http://localhost:5002/feedback/add", activityvar)
+    axios.post("https://newestyle-clothes-be.onrender.com/feedback/add", activityvar)
       .then((res) => {
         window.location = "/About";
       });

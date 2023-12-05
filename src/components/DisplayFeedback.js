@@ -17,7 +17,7 @@ class DisplayFeedback extends Component {
   }      
       
       componentDidMount() {
-          axios.get('http://localhost:5002/feedback/')
+          axios.get('https://newestyle-clothes-be.onrender.com/feedback/')
             .then(response => {              
               this.setState({ feedbacks: response.data })
               console.log(this.state.feedbacks);  // Log the state after setting it
@@ -28,7 +28,7 @@ class DisplayFeedback extends Component {
       }
     
       deleteFeedback(id) {
-          axios.delete('http://localhost:5002/feedback/' + id)
+          axios.delete('https://newestyle-clothes-be.onrender.com/feedback/' + id)
               .then(response => { console.log(response.data) });
           this.setState({
             feedbacks: this.state.feedbacks.filter(el => el._id !== id)
