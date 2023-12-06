@@ -47,10 +47,10 @@ const Home = ({ clothes, addToCart}) => {
     }
 
     setFilteredClothes(updatedClothes);
-    setCurrentPage(1); // Reset to the first page when filters change
+    setCurrentPage(1);
   };
 
-    // Use useEffect to update filteredClothes when the clothes prop changes
+    // Use useEffect to update filteredClothes when the clothes prop changes, fix for search functionality
     useEffect(() => {
       setFilteredClothes(clothes);
     }, [clothes]);

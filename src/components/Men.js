@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Filter from './Filter';
 
 function ClothingItem({id, name, gender, desc, image, addToCart}) {
@@ -30,8 +30,6 @@ const Men = ({ clothes, addToCart }) => {
 
   const handleFilterChange = (filterType, value) => {
     let updatedClothes = clothes;
-  
-
     switch (filterType) {
       case 'tops':
         updatedClothes = clothes.filter((item) => item.tops.includes(value));
@@ -48,7 +46,7 @@ const Men = ({ clothes, addToCart }) => {
     }
     
     setFilteredClothes(updatedClothes);
-    setCurrentPage(1); // Reset to the first page when filters change
+    setCurrentPage(1);
     
   };
 
@@ -57,8 +55,6 @@ const Men = ({ clothes, addToCart }) => {
   const currentItems = filteredClothes.slice(indexOfFirstItem, indexOfLastItem);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-   
 
   return (
     <div className="page-container">

@@ -22,7 +22,7 @@ function ClothingItem({id, name, gender, desc, image, addToCart}) {
 }
 
 const Men = ({ clothes, addToCart }) => {
-  // Filter the prop clothes first based on gender 'male'
+  // Filter the prop clothes first based on gender 'kids'
   const kidsClothes = clothes.filter((item) => item.gender === 'kids');
   const [filteredClothes, setFilteredClothes] = useState(kidsClothes);
   const [currentPage, setCurrentPage] = useState(1);
@@ -48,7 +48,7 @@ const Men = ({ clothes, addToCart }) => {
     }
     
     setFilteredClothes(updatedClothes);
-    setCurrentPage(1); // Reset to the first page when filters change
+    setCurrentPage(1);
     
   };
 
@@ -83,10 +83,7 @@ const Men = ({ clothes, addToCart }) => {
           </button>
         ))}
       </div>
-
     </div>
-
-    
   );
 };
 

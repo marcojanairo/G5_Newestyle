@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-
 const Feedback = props => (
   <tr className="d-flex">
         <td>{props.feedback.username}</td>
@@ -13,14 +12,14 @@ class DisplayFeedback extends Component {
     constructor(props) {
       super(props);
    
-      this.state = { feedbacks: [] }; // looks like this     is where the succeeding states are coming from
+      this.state = { feedbacks: [] };
   }      
       
       componentDidMount() {
           axios.get('https://newestyle-clothes-be.onrender.com/feedback/')
             .then(response => {              
               this.setState({ feedbacks: response.data })
-              console.log(this.state.feedbacks);  // Log the state after setting it
+              console.log(this.state.feedbacks);
               })
               .catch((error) => {
                   console.log(error);

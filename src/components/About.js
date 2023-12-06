@@ -1,6 +1,6 @@
 import React from 'react';
-import NewFeedback from './NewFeedback'; // Make sure the path is correct
-import DisplayFeedback from './DisplayFeedback'; // Make sure the path is correct
+import NewFeedback from './NewFeedback';
+import DisplayFeedback from './DisplayFeedback';
 import '../css/About.css';
 
 const About = () => {
@@ -21,13 +21,13 @@ const About = () => {
             The clothing store where quality products and great customer service meets.
           </p>
         </div>
-        {/* Right Column: Feedback Form */}
+        {/* Right: Feedback Form */}
         <div className="right-column">
           <NewFeedback />
         </div>
       </div>
 
-      {/* Lower Part: Display Submitted Feedbacks */}
+      {/* Lower Part: Submitted feedbacks */}
       <div className="lower-part">
         <DisplayFeedback />
       </div>

@@ -1,4 +1,3 @@
-// CartIcon.js
 import React from 'react';
 
 const CartIcon = ({ cartSize, clearCart }) => {

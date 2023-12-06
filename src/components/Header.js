@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import CartIcon from './CartIcon';
 
-
-
 const Header = ({ onSearch, cartSize, addToCart }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const location = useLocation();

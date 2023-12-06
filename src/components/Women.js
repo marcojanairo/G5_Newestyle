@@ -48,7 +48,7 @@ const Men = ({ clothes, addToCart }) => {
     }
     
     setFilteredClothes(updatedClothes);
-    setCurrentPage(1); // Reset to the first page when filters change
+    setCurrentPage(1);
     
   };
 
@@ -57,8 +57,6 @@ const Men = ({ clothes, addToCart }) => {
   const currentItems = filteredClothes.slice(indexOfFirstItem, indexOfLastItem);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-   
 
   return (
     <div className="page-container">
@@ -83,10 +81,7 @@ const Men = ({ clothes, addToCart }) => {
           </button>
         ))}
       </div>
-
-    </div>
-
-    
+    </div>  
   );
 };
 
