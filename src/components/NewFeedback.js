@@ -48,7 +48,7 @@ class NewFeedback extends Component {
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <br />
-            <label>Username (optional): </label>
+            <label>Username: </label>
             <input
               type="text"
               required className="form-control"
@@ -57,7 +57,7 @@ class NewFeedback extends Component {
             />
             <br />
             <br />
-            <label>Feedback </label>
+            <label>Feedback: </label>
             <br />
             <textarea className = "form-control-feedback"
               rows="4"

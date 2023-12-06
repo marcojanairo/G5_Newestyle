@@ -16,7 +16,9 @@ const About = () => {
             style={{ width: '180px', height: '180px' }}
           />
           <p className="about-online-store">
-            Welcome to the Newestyle online store! We are dedicated to providing quality products and excellent service to our customers.
+            Welcome to the Newestyle!
+            <br /><br />
+            The clothing store where quality products and great customer service meets.
           </p>
         </div>
         {/* Right Column: Feedback Form */}

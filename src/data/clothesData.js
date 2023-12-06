@@ -1,7 +1,7 @@
   const clothes = [
       {
         id: '1',
-        name: 'Pants',
+        name: 'Light Brown Pants Stylish',
         gender: 'male',
         desc: 'Linen Pants',
         image: require('./clothes_image/pants.jpg'),
@@ -12,7 +12,7 @@
       },
       {
         id: '2',
-        name: 'Tshirt',
+        name: 'Ocean Blue T-Shirt',
         gender: 'female',
         desc: 'Lots of T-shirts',
         image: require('./clothes_image/tshirt.jpg'),
@@ -23,7 +23,7 @@
       },
     {
       id: '3',
-      name: 'Shirt with Cat',
+      name: 'Angry Cat in a Shirt',
       gender: 'male',
       desc: 'Graphic Shirt',
       image: require('./clothes_image/cat-shirt.jpg'),
@@ -34,7 +34,7 @@
     },
     {
       id: '4',
-      name: 'Shirt',
+      name: 'Minimalist Shirt',
       gender: 'male',
       desc: 'White Shirt',
       image: require('./clothes_image/white-graphic.jpg'),
@@ -45,7 +45,7 @@
     },
     {
       id: '5',
-      name: 'Blazer',
+      name: 'Fashionable Stripes Blazer',
       gender: 'female',
       desc: 'Women Blazer',
       image: require('./clothes_image/blazer.jpg'),
@@ -56,7 +56,7 @@
     },
     {
       id: '6',
-      name: 'Hoodie',
+      name: 'White Cotton Hoodie',
       gender: 'male',
       desc: 'White Hoodie',
       image: require('./clothes_image/white-hoodie.jpg'),
@@ -67,7 +67,7 @@
     },
     {
       id: '7',
-      name: 'Romper',
+      name: 'Moss Green Cute Romper',
       gender: 'female',
       desc: 'Green Romper',
       image: require('./clothes_image/romper.jpg'),
@@ -78,7 +78,7 @@
     },
     {
       id: '8',
-      name: 'Flowery Dress',
+      name: 'Flowery Sunset Dress',
       gender: 'female',
       desc: 'Floral Dress',
       image: require('./clothes_image/longsleeve-dress.jpg'),
@@ -89,7 +89,7 @@
     },
     {
       id: '9',
-      name: 'Sweat Pants',
+      name: 'Sporty Sweat Pants',
       gender: 'male',
       desc: 'Sweatpants',
       image: require('./clothes_image/sweatpants.jpg'),
@@ -100,7 +100,7 @@
     },
     {
       id: '10',
-      name: 'Bright yellow skirt',
+      name: 'Bright Yellow Long Skirt',
       gender: 'female',
       desc: 'Yellow Skirt',
       image: require('./clothes_image/yellow-skirt.jpg'),
@@ -111,7 +111,7 @@
     },
     {
       id: '11',
-      name: 'Cute Onesie',
+      name: 'Cute Kids Onesie',
       gender: 'kids',
       desc: 'Kids Onesie',
       image: require('./clothes_image/bear.jpg'),
@@ -122,7 +122,7 @@
     },
     {
       id: '12',
-      name: 'Overall for the Kids',
+      name: 'White Kids Overall',
       gender: 'neutral',
       desc: 'Kids Overall',
       image: require('./clothes_image/overall.jpg'),
@@ -134,7 +134,7 @@
     },
     {
       id: '13',
-      name: 'Comfortable linen top',
+      name: 'Comfortable Linen Outfit',
       gender: 'female',
       desc: 'Linen Top',
       image: require('./clothes_image/linen-top.jpg'),
@@ -145,7 +145,7 @@
     },
     {
       id: '14',
-      name: 'Suit for Men',
+      name: 'Gray Stylish Suit',
       gender: 'male',
       desc: 'Men Suit',
       image: require('./clothes_image/suit.jpg'),
@@ -156,7 +156,7 @@
     },
     {
       id: '15',
-      name: 'Awesome Jeans',
+      name: 'Simple Striaght Cut Jeans',
       gender: 'female',
       desc: 'Jeans',
       image: require('./clothes_image/women-jean.jpg'),
@@ -167,7 +167,7 @@
     },
     {
       id: '16',
-      name: 'Ms. Jeans Jacket',
+      name: 'Denim Jacket',
       gender: 'female',
       desc: 'Jean Jacket',
       image: require('./clothes_image/jean-jacket.jpg'),
@@ -178,7 +178,7 @@
     },
     {
       id: '17',
-      name: 'Great day to day outfit',
+      name: 'Open Button Long Sleeve',
       gender: 'male',
       desc: 'Graphic Long Sleeve',
       image: require('./clothes_image/graphic-longsleeve.jpg'),
@@ -189,7 +189,7 @@
     },
     {
       id: '18',
-      name: 'Comfortable Outerwear',
+      name: 'Black and White Sportswear',
       gender: 'female',
       desc: 'Athletic Leggings',
       image: require('./clothes_image/leggings.jpg'),
@@ -200,7 +200,7 @@
     },
     {
       id: '19',
-      name: 'Shorts with Garter',
+      name: 'Garterized Shorts',
       gender: 'kids',
       desc: 'Polka Dot Shorts',
       image: require('./clothes_image/polka-shorts.jpg'),
@@ -211,7 +211,7 @@
     },
     {
       id: '20',
-      name: 'Blue and White Shirts',
+      name: 'Blue and White Kids Shirts',
       gender: 'kids',
       desc: 'Kids Tshirt',
       image: require('./clothes_image/tshirt-kids.jpg'),
@@ -223,7 +223,7 @@
     },
     {
       id: '21',
-      name: 'Cargo Pants 5',
+      name: 'Cargo Pants Gray',
       gender: 'male',
       desc: 'Cargo Pants',
       image: require('./clothes_image/cargo-pants.jpg'),
@@ -234,7 +234,7 @@
     },
     {
       id: '22',
-      name: 'Shorts Colored Gray',
+      name: 'Light Colored Shirts',
       gender: 'male',
       desc: 'Gray Shorts',
       image: require('./clothes_image/gray-shorts.jpg'),
@@ -245,7 +245,7 @@
     },
     {
       id: '23',
-      name: 'Maroon athletic wear',
+      name: 'Maroon Athletic Wear',
       gender: 'female',
       desc: 'Athletic Wear',
       image: require('./clothes_image/athletic-wear.jpg'),
@@ -267,7 +267,7 @@
     },
     {
       id: '25',
-      name: 'Apollo',
+      name: 'White and Red Fleece Jacket',
       gender: 'kids',
       desc: 'Fleece Jacket',
       image: require('./clothes_image/kids-fleece.jpg'),
@@ -278,7 +278,7 @@
     },
     {
       id: '26',
-      name: 'Hades',
+      name: 'Yellow Kids Snowsuit',
       gender: 'kids',
       desc: 'Yellow Snowsuit',
       image: require('./clothes_image/kids-snowsuit.jpg'),
@@ -289,7 +289,7 @@
     },
     {
       id: '27',
-      name: 'Hermes',
+      name: 'Men Jean Shorts',
       gender: 'male',
       desc: 'Jean Shorts',
       image: require('./clothes_image/jean-shorts.jpg'),
@@ -301,7 +301,7 @@
     },
     {
       id: '28',
-      name: 'Poseidon',
+      name: 'Red Fleece Sweater',
       gender: 'female',
       desc: 'Red Sweater',
       image: require('./clothes_image/red-sweater.jpg'),
@@ -312,7 +312,7 @@
     },
     {
       id: '29',
-      name: 'Hephaestus',
+      name: 'Loose Black Shirt',
       gender: 'male',
       desc: 'Black Tshirt',
       image: require('./clothes_image/tshirt-black.jpg'),
@@ -323,7 +323,7 @@
     },
     {
       id: '30',
-      name: 'Athena',
+      name: 'Red Cardigan Wool',
       gender: 'female',
       desc: 'Red Cardigan',
       image: require('./clothes_image/cardigan.jpg'),
@@ -334,11 +334,11 @@
     },
     {
       id: '31',
-      name: 'Dionysus',
+      name: 'Checkered Polo',
       gender: 'male',
-      desc: 'Plaid Jacket',
+      desc: 'Polo for Men',
       image: require('./clothes_image/plaid.jpg'),
-      tops: ['Jackets'],
+      tops: ['Others'],
       bottoms: [],
       price: '265',
       price_range: '25+',

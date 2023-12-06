@@ -17,8 +17,9 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 15px;
+  flex: 1;
+  gap: 16px;
 }
-
 
 .clothing-item {
   border: 1px solid #ddd;
@@ -36,7 +37,7 @@ body {
   margin-top: 10px;
 }
 
-/* NAVIGATION MENU */
+/* NAVIGATION */
 
 .nav-list {
   list-style: none;
@@ -58,7 +59,7 @@ nav {
 nav a {
   text-decoration: none;
   color: #fff;
-  padding: 10px; /* Adjust the space between navigation links*/
+  padding: 10px;
 }
 
 nav a:hover {
@@ -88,14 +89,6 @@ nav a:hover {
 .filter-container label {
   display: block;
   margin-left: 5px;
-}
-
-
-.container {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
 }
 
 .pagination {

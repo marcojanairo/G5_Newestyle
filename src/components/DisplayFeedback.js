@@ -13,7 +13,7 @@ class DisplayFeedback extends Component {
     constructor(props) {
       super(props);
    
-      this.state = { feedbacks: [] }; // looks like this is where the succeeding states are coming from
+      this.state = { feedbacks: [] }; // looks like this     is where the succeeding states are coming from
   }      
       
       componentDidMount() {
